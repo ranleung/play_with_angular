@@ -1,0 +1,28 @@
+Change the background color: <br><input type="text" ng-model="background">
+
+
+<div ng-controller = "IndexCtrl">
+	
+	<h3>I have {{favoriteMovies.length}} <ng-pluralize count = "favoriteMovies.length" when= "{'1' : 'favorite movie', 'other' : 'favorite movies'}"></ng-pluralize></h3>
+
+	<input type="checkbox" ng-model="checked" id="check">Show my favorite movies</button>
+	
+	<h2>My Favorite Movies: </h2>
+	<div ng-show="checked"ng-repeat="favoriteMovie in favoriteMovies | orderBy:'title' | limitTo: 3">
+		<ul>
+			<li>Title : {{favoriteMovie.title}}</li>
+			<li>In reverse : {{favoriteMovie.title | reverse}}</li>
+			<button ng-click="removeMovie(favoriteMovie)">Remove this title</button>
+		</ul>
+	</div>
+
+<label for="keyPress">
+User Input: 
+<input type="text" ng-keypress="keyPressed()"><br>
+Key Press Count: {{count}}
+</label>
+
+
+
+</div>
+</div>
