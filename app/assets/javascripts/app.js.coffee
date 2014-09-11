@@ -32,6 +32,10 @@ App.controller "IndexCtrl", ['$scope', ($scope) ->
 	$scope.keyPressed = ->
 		$scope.count++
 
+	$scope.word = false
+	$scope.submit = ->
+		$scope.word = true
+
 ]
 
 App.filter "reverse", ->

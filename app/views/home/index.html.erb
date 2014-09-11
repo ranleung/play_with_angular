@@ -18,10 +18,15 @@ Change the background color: <br><input type="text" ng-model="background">
 
 <label for="keyPress">
 User Input: 
-<input type="text" ng-keypress="keyPressed()"><br>
+<input type="text" ng-keypress="keyPressed()" autofocus><br>
 Key Press Count: {{count}}
 </label>
 
+<hr>
+
+<label for="word">
+Input Word to Submit: <input type="text" ng-hide="word" id="word" /></label><br />
+<button ng-click="submit()">SAVE</button>
 
 
 </div>

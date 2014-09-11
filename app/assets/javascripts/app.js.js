@@ -26,8 +26,12 @@ App.controller("IndexCtrl", [
       return $scope.favoriteMovies.splice($scope.favoriteMovies.indexOf(movie), 1);
     };
     $scope.count = 0;
-    return $scope.keyPressed = function() {
+    $scope.keyPressed = function() {
       return $scope.count++;
+    };
+    $scope.word = false;
+    return $scope.submit = function() {
+      return $scope.word = true;
     };
   }
 ]);
